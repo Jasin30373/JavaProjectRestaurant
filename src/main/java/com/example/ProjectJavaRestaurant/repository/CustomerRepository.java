@@ -1,4 +1,7 @@
 package com.example.ProjectJavaRestaurant.repository;
 
-public interface CustomerRepository {
+import com.example.ProjectJavaRestaurant.pojo.entity.Customer;
+import org.springframework.data.repository.CrudRepository;
+
+public interface CustomerRepository extends CrudRepository<Customer, Integer> {
 }
