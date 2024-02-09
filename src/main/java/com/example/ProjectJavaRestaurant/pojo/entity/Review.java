@@ -8,15 +8,14 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToMany
+    @ManyToOne
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
     private Integer rating;
     private String comment;
 
-    public Review(){
-
+    public Review() {
     }
 
     public Review(Integer id, Customer customer, Integer rating, String comment) {
@@ -26,19 +25,36 @@ public class Review {
         this.comment = comment;
     }
 
-    public Integer getId() {return id;}
+    public Integer getId() {
+        return id;
+    }
 
-    public void setId(Integer id) {this.id = id;}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-    public Customer getCustomer() {return customer;}
+    public Customer getCustomer() {
+        return customer;
+    }
 
-    public void setCustomer(Customer customer) {this.customer = customer;}
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
 
-    public Integer getRating() {return rating;}
+    public Integer getRating() {
+        return rating;
+    }
 
-    public void setRating(Integer rating) {this.rating = rating;}
+    public void setRating(Integer rating) {
+        this.rating = rating;
+    }
 
-    public String getComment() {return comment;}
+    public String getComment() {
+        return comment;
+    }
 
-    public void setComment(String comment) {this.comment = comment;}
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+    // Constructors, getters, setters, and other methods
 }

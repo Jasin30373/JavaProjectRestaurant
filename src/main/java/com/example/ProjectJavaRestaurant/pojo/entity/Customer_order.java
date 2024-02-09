@@ -9,18 +9,19 @@ public class Customer_order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToMany
+    @ManyToOne
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
     @ManyToMany
     @JoinTable(name = "order_menu_items",
-                joinColumns = @JoinColumn(name = "order_id"),
-                inverseJoinColumns = @JoinColumn(name = "menu_item_id"))
+            joinColumns = @JoinColumn(name = "order_id"),
+            inverseJoinColumns = @JoinColumn(name = "menu_item_id"))
     private List<MenuItem> items;
+
     private double totalAmount;
 
-    public Customer_order(){
+    public Customer_order() {
     }
 
     public Customer_order(Integer id, Customer customer, List<MenuItem> items, double totalAmount) {
@@ -61,4 +62,5 @@ public class Customer_order {
     public void setTotalAmount(double totalAmount) {
         this.totalAmount = totalAmount;
     }
+    // Constructors, getters, setters, and other methods
 }

@@ -12,16 +12,16 @@ public class Customer_table {
     private Integer id;
     private Integer tableNumber;
     private Integer capacity;
-    private boolean isReversed;
+    private boolean isReserved;
 
     public Customer_table(){
     }
 
-    public Customer_table(Integer id, Integer tableNumber, Integer capacity, boolean isReversed) {
+    public Customer_table(Integer id, Integer tableNumber, Integer capacity, boolean isReserved) {
         this.id = id;
         this.tableNumber = tableNumber;
         this.capacity = capacity;
-        this.isReversed = isReversed;
+        this.isReserved = isReserved;
     }
 
     public Integer getId() {return id;}
@@ -36,7 +36,7 @@ public class Customer_table {
 
     public void setCapacity(Integer capacity) {this.capacity = capacity;}
 
-    public boolean isReversed() {return isReversed;}
+    public boolean isReserved() {return isReserved;}
 
-    public void setReversed(boolean reversed) {isReversed = reversed;}
+    public void setReversed(boolean reserved) {isReserved = reserved;}
 }
